@@ -354,6 +354,8 @@ public class PhotoModule
                 mHandler.sendEmptyMessage(OPEN_CAMERA_FAIL);
             } catch (CameraDisabledException e) {
                 mHandler.sendEmptyMessage(CAMERA_DISABLED);
+            } catch (Exception e){
+                 mHandler.sendEmptyMessage(OPEN_CAMERA_FAIL);
             }
         }
     }
